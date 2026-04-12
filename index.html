@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ときはな学校 説明会 | わたしを解き放つ学校 — 50代からのクリエイティブ自由学</title>
+    <!-- OGP Settings -->
+    <meta property="og:title" content="ときはな学校 説明会 | わたしを解き放つ学校">
+    <meta property="og:description" content="50代からのクリエイティブ自由学。もう一度、自分にワクワクする時間を始めませんか？">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="tokihana.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Base Variables */
+        :root {
+            --bg-color: #fdfbf8;
+            --text-color: #4a403a;
+            --accent-color: #d8a47f; /* Soft gold/peach */
+            --accent-hover: #c48a60;
+            --secondary-bg: #f9f4f0;
+            --primary-floral: #e8dedf;
+            --light-shadow: rgba(0, 0, 0, 0.06);
+            --sparkle-color: #eabx9b;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Zen Kaku Gothic New', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.8;
+            letter-spacing: 0.05em;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, .serif {
+            font-family: 'Noto Serif JP', serif;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            overflow: hidden;
+            background: linear-gradient(145deg, #fbf7f4 0%, #f6f0ea 100%);
+            padding-bottom: 80px;
+            padding-top: 40px;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            opacity: 0.4;
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(225, 203, 221, 0.5) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(206, 217, 235, 0.5) 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(246, 234, 216, 0.4) 0%, transparent 50%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            width: 100%;
+            max-width: 800px;
+            padding: 0 20px;
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+
+        .hero-image-container {
+            margin: 0 auto 30px;
+            width: 100%;
+            max-width: 460px;
+            position: relative;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        /* Shimmering glow behind image */
+        .hero-image-container::before {
+            content: '';
+            position: absolute;
+            top: -10%;
+            left: -10%;
+            right: -10%;
+            bottom: -10%;
+            background: radial-gradient(circle, rgba(255,255,255,0.9) 0%, transparent 70%);
+            z-index: -1;
+            border-radius: 50%;
+            filter: blur(10px);
+        }
+
+        .hero-img {
+            width: 100%;
+            height: auto;
+            border-radius: 16px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+            object-fit: cover;
+            border: 3px solid rgba(255, 255, 255, 0.8);
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .catchphrase {
+            text-align: center;
+            color: #614d50;
+            font-size: clamp(1.4rem, 4.5vw, 1.95rem);
+            letter-spacing: 0.1em;
+            line-height: 1.5;
+            font-weight: 400;
+            margin-bottom: 30px;
+        }
+        
+        .catchphrase .x-mark {
+            font-family: 'Zen Kaku Gothic New', sans-serif;
+            font-size: 0.8em;
+            margin: 0 4px;
+            color: #d8a47f;
+            display: inline-block;
+            transform: translateY(-2px);
+        }
+
+        .school-name {
+            display: inline-block;
+            font-size: 1rem;
+            color: #83756d;
+            margin-bottom: 15px;
+            letter-spacing: 0.15em;
+            padding: 4px 16px;
+            border-bottom: 1px solid rgba(216, 164, 127, 0.4);
+        }
+
+        .main-title {
+            font-size: clamp(1.8rem, 4.5vw, 2.8rem);
+            line-height: 1.4;
+            margin-bottom: 5px;
+            font-weight: 400;
+            color: #4a403a;
+            letter-spacing: 0.1em;
+        }
+
+        .subtitle {
+            font-size: clamp(1rem, 2vw, 1.3rem);
+            margin-bottom: 15px;
+            font-weight: 300;
+            color: #8c7e75;
+            letter-spacing: 0.15em;
+        }
+
+        .course-brief {
+            margin-top: 15px;
+            margin-bottom: 25px;
+        }
+
+        .course-duration {
+            display: inline-block;
+            border: 1px solid rgba(216, 164, 127, 0.6);
+            color: #a47e62;
+            padding: 4px 18px;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            margin-bottom: 18px;
+            letter-spacing: 0.1em;
+            background-color: rgba(255, 255, 255, 0.6);
+        }
+
+        .course-catch {
+            font-size: clamp(1.3rem, 3.5vw, 1.6rem);
+            color: #5d484c;
+            line-height: 1.6;
+            margin: 0;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+        }
+
+        /* Event Details Box */
+        .event-details {
+            background-color: white;
+            border-radius: 20px;
+            padding: 45px 30px;
+            margin: -60px auto 70px;
+            max-width: 650px;
+            box-shadow: 0 15px 45px var(--light-shadow);
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            border: 1px solid rgba(240, 235, 230, 0.8);
+        }
+
+        .event-label {
+            display: inline-block;
+            background-color: var(--primary-floral);
+            color: #614d50;
+            padding: 6px 20px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+            letter-spacing: 0.15em;
+        }
+
+        .event-date {
+            font-size: clamp(1.8rem, 4vw, 2.2rem);
+            color: var(--text-color);
+            margin-bottom: 15px;
+            font-weight: 400;
+            letter-spacing: 0.05em;
+        }
+
+        .event-date span.day {
+            font-size: 1.3rem;
+            margin: 0 5px;
+        }
+
+        .event-note {
+            font-size: 0.95rem;
+            color: #888;
+            margin-bottom: 35px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .event-note::before {
+            content: '💻';
+            font-size: 1.1rem;
+        }
+
+        /* CTA Button */
+        .cta-container {
+            margin-top: 10px;
+        }
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--accent-color), #deaf8f);
+            color: white;
+            padding: 20px 45px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-size: 1.15rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(216, 164, 127, 0.4);
+            position: relative;
+            overflow: hidden;
+            font-family: 'Zen Kaku Gothic New', sans-serif;
+        }
+
+        .cta-button::after {
+            content: '〉';
+            margin-left: 10px;
+            font-size: 0.9em;
+            transition: transform 0.3s;
+        }
+
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: all 0.6s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(216, 164, 127, 0.5);
+            background: linear-gradient(135deg, var(--accent-hover), #d29e7b);
+        }
+
+        .cta-button:hover::before {
+            left: 100%;
+        }
+
+        .cta-button:hover::after {
+            transform: translateX(4px);
+        }
+
+        /* Introduction Section */
+        .intro-section {
+            padding: 30px 20px 90px;
+            text-align: center;
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        .intro-heading {
+            font-size: clamp(1.3rem, 3vw, 1.6rem);
+            margin-bottom: 45px;
+            color: #8c7e75;
+            position: relative;
+            display: inline-block;
+            font-weight: 400;
+        }
+
+        .intro-heading .sparkle {
+            color: #d8a47f;
+            font-size: 1.2em;
+            margin: 0 10px;
+            opacity: 0.8;
+            display: inline-block;
+            animation: pulse 3s infinite alternate;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1) rotate(0deg); opacity: 0.6; }
+            100% { transform: scale(1.1) rotate(5deg); opacity: 1; }
+        }
+
+        .intro-text {
+            font-size: 1.05rem;
+            line-height: 2.2;
+            color: #5d514a;
+            margin-bottom: 35px;
+            text-align: left;
+            display: inline-block;
+        }
+        
+        @media (max-width: 500px) {
+            .intro-text {
+                text-align: center;
+            }
+        }
+
+        .message-box {
+            background-color: var(--secondary-bg);
+            border-radius: 16px;
+            padding: 40px 30px;
+            margin-top: 50px;
+            position: relative;
+        }
+
+        .message-box::before {
+            content: '“';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-family: serif;
+            font-size: 5rem;
+            color: rgba(216, 164, 127, 0.15);
+            line-height: 1;
+        }
+
+        .message-box p {
+            position: relative;
+            z-index: 2;
+            font-weight: 500;
+            color: #635048;
+        }
+
+        /* Secondary CTA */
+        .secondary-cta {
+            margin-top: 60px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #f4efed;
+            padding: 40px 20px;
+            text-align: center;
+            color: #9a8f89;
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .hero {
+                padding-top: 30px;
+                padding-bottom: 60px;
+            }
+            .event-details {
+                width: 92%;
+                margin: -40px auto 50px auto;
+                padding: 35px 20px;
+                box-sizing: border-box;
+            }
+            .event-date {
+                font-size: 1.5rem;
+            }
+            .event-date span.day {
+                font-size: 1.1rem;
+            }
+            .cta-button {
+                padding: 16px 20px;
+                font-size: 1.05rem;
+                width: 100%;
+                box-sizing: border-box;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+            .intro-section {
+                padding: 20px 20px 60px;
+            }
+            .intro-text {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-content">
+            <div class="catchphrase serif">
+                ＡＩ<span class="x-mark">x</span>スピリチュアル<br>でわたしが変わる
+            </div>
+            <div class="hero-image-container">
+                <!-- Using the requested attached image -->
+                <img src="tokihana.png" alt="わたしを解き放つ学校 メインビジュアル" class="hero-img">
+            </div>
+            
+            <div class="school-name serif">50代からのクリエイティブ自由学</div>
+            <h1 class="main-title serif">
+                わたしを解き放つ学校
+            </h1>
+            <p class="subtitle serif">
+                略称：ときはな学校
+            </p>
+            
+            <div class="course-brief">
+                <p class="course-duration">５月開講　６カ月コース</p>
+                <p class="course-catch serif">
+                    「画像」「文章」「音楽」で<br>
+                    輝く自分になる！
+                </p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Event Details section floating over hero and background -->
+    <div class="event-details">
+        <div class="event-label serif">無料オンライン説明会<br>開催決定</div>
+        
+        <h2 class="event-date serif">
+            4月17日<span class="day">(金)</span>20:00<span style="font-size: 1.2rem; margin-left: 5px; font-weight: normal;">〜</span>
+        </h2>
+        
+        <p class="event-note">
+            Zoomでのオンライン開催となります
+        </p>
+        <p style="font-size: 0.95rem; color: #d8a47f; margin: -20px 0 35px; font-weight: 500; letter-spacing: 0.05em;">
+            ※お申込みの方には、説明会後アーカイブをお送りします。
+        </p>
+        
+        <div class="cta-container">
+            <a href="https://ssl.formman.com/t/JHaH/" target="_blank" rel="noopener noreferrer" class="cta-button">
+                Zoom説明会に申し込む
+            </a>
+        </div>
+    </div>
+
+    <!-- Introduction / Concept Section -->
+    <section class="intro-section">
+        <h3 class="intro-heading serif">
+            <span class="sparkle">✦</span> もう一度、自分にワクワクする <span class="sparkle">✦</span>
+        </h3>
+        
+        <div style="text-align: center;">
+            <p class="intro-text">
+                これまでの人生、さまざまな経験を重ねてきた。<br>
+                家族のため、仕事のため、誰かのために生きてきた。<br>
+                <br>
+                だからこそ、これからの時間は<br>
+                「本当に自分が心から喜ぶこと」を選びませんか？
+            </p>
+            <br>
+            <p class="intro-text">
+                「わたしを解き放つ学校」は、<br>
+                50代からもっと自由に、<br>
+                クリエイティブに生きるための場所。<br>
+                <br>
+                あなたの内に眠る魅力と才能が、<br>
+                ふたたび優しく輝き始めます。
+            </p>
+        </div>
+
+        <div class="message-box">
+            <p>
+                「わたしにも、まだできることがあるかもしれない」<br>
+                <br>
+                そんな小さな予感を、一緒に育てていきませんか？<br>
+                まずは説明会で、そのあたたかな空気感にふれてみてください。
+            </p>
+        </div>
+        
+        <div class="cta-container secondary-cta">
+            <a href="https://ssl.formman.com/t/JHaH/" target="_blank" rel="noopener noreferrer" class="cta-button" style="padding: 15px 35px; font-size: 1.05rem;">
+                説明会に申し込む
+            </a>
+            <p style="margin-top: 15px; font-size: 0.85rem; color: #999;">
+                ※参加は無料です。お気軽にご参加ください。
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; Healing Fountains Co,.LTD. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
